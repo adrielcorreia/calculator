@@ -1,0 +1,121 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+body {
+    background: radial-gradient(circle, rgba(150,150,150,1) 30%, rgba(119,119,119,1) 50%);
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    padding: 1rem 0.7rem;
+    display: flex;
+    flex-direction: column;
+    background: #5A5C68;
+    border-radius: 1rem;
+    row-gap: 1rem;
+    border-right: 5px solid #3c3f47;
+    border-bottom: 5px solid #3c3f47;
+}
+
+.display {
+    display: grid;
+    text-align: end;
+    align-items: center;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    width: 13rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(1.25rem, auto) minmax(2.2rem, auto);
+    color: #ecffc7;
+    background: #acc087;
+    font-size: 1.75rem;
+    font-weight: bold;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.previous-calc {
+    font-size: 1rem;
+}
+
+.numbers {
+    display: grid;
+    column-gap: 0.6rem;
+    row-gap: 0.6rem;
+    grid-template-columns: repeat(4, 2.8rem);
+    grid-template-rows: repeat(5, 2.8rem);
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    border-radius: 0.5rem;
+    width: 100%;
+    height: 100%;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+.number{
+    background: #3D4049;
+    font-size: 2rem;
+    border-right: 5px solid #33363d;
+    border-bottom: 5px solid #33363d;
+}
+
+.operator {
+    background: #94989d;
+    font-size: 1.28rem;
+    border-right: 5px solid #74777b;
+    border-bottom: 5px solid #74777b;
+}
+
+.number:active {
+    border-right: 3px solid #33363d;
+    border-bottom: 3px solid #33363d;
+}
+
+.operator:active {
+    border-right: 3px solid #74777b;
+    border-bottom: 3px solid #74777b;
+}
+
+.clean {
+    grid-column: 1/3;
+}
+
+.del {
+    font-size: 1rem;
+    grid-column: 3/4;
+}
+
+.equal {
+    background: orangered;
+    grid-column: 3/5;
+    font-size: 2rem;
+    border-right: 5px solid rgb(223, 60, 0);
+    border-bottom: 5px solid rgb(223, 60, 0);
+}
+
+.equal:active {
+    border-right: 3px solid rgb(223, 60, 0);
+    border-bottom: 3px solid rgb(223, 60, 0);
+}
+
+h1 {
+    font-weight: 1;
+}

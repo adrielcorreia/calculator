@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="./assets/calculator_icon.png">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="display">
+                <span data-previous-operation class="previous-calc"></span>
+                <span data-current-operation class="actual-calc"></span>
+            </div>
+
+            <div class="numbers">
+                <button class="btn operator clean" data-clean>AC</button>
+                <button class="btn operator del" data-delete>DEL</button>
+
+                <button class="btn operator" data-operation value="÷">÷</button>
+
+                <button class="btn number" data-number>7</button>
+                <button class="btn number" data-number>8</button>
+                <button class="btn number" data-number>9</button>
+
+                <button class="btn operator" data-operation value="*">x</button>
+
+                <button class="btn number" data-number>4</button>
+                <button class="btn number" data-number>5</button>
+                <button class="btn number" data-number>6</button>
+
+                <button class="btn operator" data-operation value="-">-</button>
+
+                <button class="btn number" data-number>1</button>
+                <button class="btn number" data-number>2</button>
+                <button class="btn number" data-number>3</button>
+
+                <button class="btn operator" data-operation value="+">+</button>
+
+                <button class="btn number" data-number>0</button>
+
+                <button class="btn operator" data-number>.</button>
+                <button class="btn equal" data-equals>=</button>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
