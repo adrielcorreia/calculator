@@ -23,7 +23,6 @@ operations.forEach(btn => {
             current.innerText = ''
             return
         }
-
         previous.innerText = current.innerText + btn.innerText
         current.innerText = ''
     })
