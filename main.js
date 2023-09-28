@@ -1,4 +1,5 @@
 const display = document.querySelector('.display')
+const displayCSS = getComputedStyle(display)
 const numbers = document.querySelectorAll('[data-number]')
 const operations = document.querySelectorAll('[data-operation]')
 const equals = document.querySelector('[data-equals]')
@@ -7,9 +8,10 @@ const all_clean = document.querySelector('[data-clean]')
 const previous = document.querySelector('[data-previous-operation]')
 const current = document.querySelector('[data-current-operation]')
 
+current.style.maxWidth = displayCSS.width;
+
 numbers.forEach(btn => {
     btn.addEventListener('click', () => {
-        if (current.innerText.length > 9) display.style.paddingLeft = '1.6rem'
         if (current.innerText.length >= 30) return
         if (btn.innerText == '.' && current.innerText.includes('.')) return
         current.innerText += btn.innerText

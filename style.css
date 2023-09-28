@@ -7,12 +7,23 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
 
+:root {
+    --bg-color: #c8c8c8;
+    --container-color: #3c3f47;
+    --primary-btn-color: #33363d;
+    --primary-equal-color: orangered;
+    --secondary-equal-color: rgb(223, 60, 0);
+    --secondary-btn-color: #74777b;
+    --display-background-color: #acc087; 
+    --display-text-color: #f3ffdc;
+}
+
 body {
-    background:rgb(200,200,200);
+    width: 100vw;
+    background:#c8c8c8;
 }
 
 main {
-    width: 100vw;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -26,25 +37,28 @@ main {
     background: #5A5C68;
     border-radius: 1rem;
     row-gap: 1rem;
-    border-right: 5px solid #3c3f47;
-    border-bottom: 5px solid #3c3f47;
+    border-right: 5px solid var(--container-color);
+    border-bottom: 5px solid var(--container-color);
 }
 
 .display {
+    box-sizing: content-box;
     display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(1.25rem, auto) minmax(2.2rem, auto);
+    
     text-align: end;
     align-items: center;
     border-radius: 0.5rem;
     padding: 0.5rem 1rem;
-    width: 13rem;
-    grid-template-columns: 1fr;
-    grid-template-rows: minmax(1.25rem, auto) minmax(2.2rem, auto);
-    color: #ecffc7;
-    background: #acc087;
+
     font-size: 1.75rem;
     font-weight: bold;
     word-wrap: break-word;
     word-break: break-all;
+
+    color: var(--display-text-color);
+    background: var(--display-background-color);
 }
 
 .previous-calc {
@@ -53,45 +67,45 @@ main {
 
 .numbers {
     display: grid;
-    column-gap: 0.6rem;
-    row-gap: 0.6rem;
     grid-template-columns: repeat(4, 2.8rem);
     grid-template-rows: repeat(5, 2.8rem);
     justify-content: center;
     align-items: center;
+    column-gap: 0.6rem;
+    row-gap: 0.6rem;
 }
 
 .btn {
     border-radius: 0.5rem;
-    width: 100%;
     height: 100%;
     color: white;
     cursor: pointer;
     border: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
-.number{
+.number {
     background: #3D4049;
     font-size: 2rem;
-    border-right: 5px solid #33363d;
-    border-bottom: 5px solid #33363d;
+    border-right: 5px solid var(--primary-btn-color);
+    border-bottom: 5px solid var(--primary-btn-color);
 }
 
 .operator {
     background: #94989d;
     font-size: 1.28rem;
-    border-right: 5px solid #74777b;
-    border-bottom: 5px solid #74777b;
+    border-right: 5px solid var(--secondary-btn-color);
+    border-bottom: 5px solid var(--secondary-btn-color);
 }
 
-.number:active {
-    border-right: 3px solid #33363d;
-    border-bottom: 3px solid #33363d;
+.number:active, .operator:active {
+    border-right: 3px solid;
+    border-bottom: 3px solid;
+    border-color: var(--primary-btn-color);
 }
 
 .operator:active {
-    border-right: 3px solid #74777b;
-    border-bottom: 3px solid #74777b;
+    border-color: var(--secondary-btn-color);;
 }
 
 .clean {
@@ -107,13 +121,13 @@ main {
     background: orangered;
     grid-column: 3/5;
     font-size: 2rem;
-    border-right: 5px solid rgb(223, 60, 0);
-    border-bottom: 5px solid rgb(223, 60, 0);
+    border-right: 5px solid var(--secondary-equal-color);
+    border-bottom: 5px solid var(--secondary-equal-color);
 }
 
 .equal:active {
-    border-right: 3px solid rgb(223, 60, 0);
-    border-bottom: 3px solid rgb(223, 60, 0);
+    border-right: 3px solid var(--secondary-equal-color);
+    border-bottom: 3px solid var(--secondary-equal-color);
 }
 
 h1 {
