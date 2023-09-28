@@ -81,7 +81,7 @@ main {
     color: white;
     cursor: pointer;
     border: none;
-    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: transparent; /* tirar aquele quadrado azul que aparece qnd clica em algo*/
 }
 
 .number {
